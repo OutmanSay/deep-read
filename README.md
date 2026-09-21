@@ -8,7 +8,7 @@
 
 ### Overview
 
-Deep Read is a portable agent skill (Codex, ChatGPT, Claude Code) for analyzing expository nonfiction with Mortimer J. Adler and Charles Van Doren's fifteen rules of analytical reading.
+Deep Read is a portable agent skill (Claude Code, Codex, Pi, ZCode, OpenClaw, and other agents that read `SKILL.md`) for analyzing expository nonfiction with Mortimer J. Adler and Charles Van Doren's fifteen rules of analytical reading.
 
 It produces a traceable HTML reading guide that keeps all fifteen rules visible and ordered, verifies published quotations against the source text, and treats criticism as provisional rather than pretending one book can fact-check itself.
 
@@ -42,14 +42,19 @@ Pages generated for *The Courage to Be Disliked* (Kishimi & Koga):
 
 ### Installation
 
-Copy the `deep-read` directory into a skill location supported by your agent:
+Copy the `deep-read` directory into your agent's skill directory. The same `SKILL.md` works everywhere:
+
+| Agent | Skill directory |
+|---|---|
+| Claude Code | `~/.claude/skills/` |
+| Codex, Pi | `~/.agents/skills/` (Pi also reads `~/.pi/agent/skills/`) |
+| ZCode | `~/.zcode/skills/` (or import from another agent under Settings → Skills) |
+| OpenClaw | `~/.openclaw/skills/` |
 
 ```bash
 mkdir -p ~/.agents/skills
 cp -R deep-read ~/.agents/skills/deep-read
 ```
-
-For Claude Code, copy it to `~/.claude/skills/deep-read` instead; the same `SKILL.md` works there.
 
 Then invoke it explicitly with `$deep-read`, or ask the agent to deeply analyze a specific nonfiction book.
 
@@ -100,7 +105,7 @@ deep-read/
 
 Released under the [MIT License](LICENSE).
 
-This independent project applies ideas from *How to Read a Book* by Mortimer J. Adler and Charles Van Doren. It is not affiliated with or endorsed by the authors, publishers, OpenAI, or any book-distribution service.
+This independent project applies ideas from *How to Read a Book* by Mortimer J. Adler and Charles Van Doren. It is not affiliated with or endorsed by the authors, publishers, any agent vendor, or any book-distribution service.
 
 ---
 
@@ -108,7 +113,7 @@ This independent project applies ideas from *How to Read a Book* by Mortimer J. 
 
 ### 项目简介
 
-Deep Read 是一个可移植的 Agent Skill（Codex／ChatGPT／Claude Code 通用），使用莫提默·艾德勒与查尔斯·范多伦提出的分析阅读十五条规则，系统精读论说性非虚构作品。
+Deep Read 是一个可移植的 Agent Skill（Claude Code／Codex／Pi／ZCode／OpenClaw 等支持 `SKILL.md` 的 Agent 通用），使用莫提默·艾德勒与查尔斯·范多伦提出的分析阅读十五条规则，系统精读论说性非虚构作品。
 
 它会生成一份可追溯的 HTML 阅读指南：十五条规则始终清晰可见并保持原有顺序；所有公开引文都必须回到原文逐字核验；对作者的批评只作为“待议候选”，不会假装一本书能够独立核验自身的历史与事实判断。
 
@@ -142,14 +147,19 @@ Deep Read 是一个可移植的 Agent Skill（Codex／ChatGPT／Claude Code 通�
 
 ### 安装方法
 
-将 `deep-read` 目录复制到 Agent 支持的 Skill 目录，例如：
+将 `deep-read` 目录复制到所用 Agent 的 Skill 目录，同一份 `SKILL.md` 通用：
+
+| Agent | Skill 目录 |
+|---|---|
+| Claude Code | `~/.claude/skills/` |
+| Codex、Pi | `~/.agents/skills/`（Pi 也读 `~/.pi/agent/skills/`） |
+| ZCode | `~/.zcode/skills/`（也可在 设置 → 技能 里从其他 Agent 一键导入） |
+| OpenClaw | `~/.openclaw/skills/` |
 
 ```bash
 mkdir -p ~/.agents/skills
 cp -R deep-read ~/.agents/skills/deep-read
 ```
-
-Claude Code 用户复制到 `~/.claude/skills/deep-read` 即可，同一份 `SKILL.md` 通用。
 
 然后显式调用 `$deep-read`，或者直接要求 Agent 系统精读某一本非虚构作品。
 
@@ -200,4 +210,4 @@ deep-read/
 
 本项目采用 [MIT License](LICENSE) 开源。
 
-本项目独立运用《如何阅读一本书》中莫提默·艾德勒与查尔斯·范多伦提出的分析阅读思想，与原作者、出版机构、OpenAI 及任何图书分发服务均无隶属或背书关系。
+本项目独立运用《如何阅读一本书》中莫提默·艾德勒与查尔斯·范多伦提出的分析阅读思想，与原作者、出版机构、各 Agent 厂商及任何图书分发服务均无隶属或背书关系。
