@@ -8,7 +8,7 @@
 
 ### Overview
 
-Deep Read is a portable Codex/ChatGPT skill for analyzing expository nonfiction with Mortimer J. Adler and Charles Van Doren's fifteen rules of analytical reading.
+Deep Read is a portable agent skill (Codex, ChatGPT, Claude Code) for analyzing expository nonfiction with Mortimer J. Adler and Charles Van Doren's fifteen rules of analytical reading.
 
 It produces a traceable HTML reading guide that keeps all fifteen rules visible and ordered, verifies published quotations against the source text, and treats criticism as provisional rather than pretending one book can fact-check itself.
 
@@ -21,6 +21,7 @@ It produces a traceable HTML reading guide that keeps all fifteen rules visible 
 | Exact quotations | Bundled verification rejects paraphrases presented as quotations. |
 | Clear evidence boundaries | Textual interpretation and external fact-checking remain separate. |
 | Continuous reading | A follow-up mode preserves the reader's exact question and examines the smallest useful source window. |
+| Same ruler, finer scale | A deep-dive mode reruns rules 1–15 inside one chapter or concept range instead of inventing a new outline. |
 
 ### Workflow
 
@@ -39,6 +40,8 @@ Copy the `deep-read` directory into a skill location supported by your agent:
 mkdir -p ~/.agents/skills
 cp -R deep-read ~/.agents/skills/deep-read
 ```
+
+For Claude Code, copy it to `~/.claude/skills/deep-read` instead; the same `SKILL.md` works there.
 
 Then invoke it explicitly with `$deep-read`, or ask the agent to deeply analyze a specific nonfiction book.
 
@@ -75,7 +78,8 @@ deep-read-skill/
 │   ├── references/
 │   │   ├── adler-prompts.md
 │   │   ├── follow-up.md
-│   │   └── html-contract.md
+│   │   ├── html-contract.md
+│   │   └── scope-rerun.md
 │   └── scripts/
 │       ├── extract_epub_node.py
 │       ├── inspect_epub.py
@@ -96,7 +100,7 @@ This independent project applies ideas from *How to Read a Book* by Mortimer J. 
 
 ### 项目简介
 
-Deep Read 是一个可移植的 Codex／ChatGPT Skill，使用莫提默·艾德勒与查尔斯·范多伦提出的分析阅读十五条规则，系统精读论说性非虚构作品。
+Deep Read 是一个可移植的 Agent Skill（Codex／ChatGPT／Claude Code 通用），使用莫提默·艾德勒与查尔斯·范多伦提出的分析阅读十五条规则，系统精读论说性非虚构作品。
 
 它会生成一份可追溯的 HTML 阅读指南：十五条规则始终清晰可见并保持原有顺序；所有公开引文都必须回到原文逐字核验；对作者的批评只作为“待议候选”，不会假装一本书能够独立核验自身的历史与事实判断。
 
@@ -109,6 +113,7 @@ Deep Read 是一个可移植的 Codex／ChatGPT Skill，使用莫提默·艾德�
 | 引文必须精确 | 内置校验脚本会拒绝被当作原文呈现的改写与拼接。 |
 | 证据边界清楚 | 书内文本分析与外部事实核验严格分开。 |
 | 阅读可以续接 | 追问模式保留读者问题原话，只分析能够回答问题的最小原文范围。 |
+| 同一把尺子，换细刻度 | 深挖模式在某一章或某个概念范围内重跑规则 1—15，不另起一套大纲。 |
 
 ### 工作流程
 
@@ -127,6 +132,8 @@ Deep Read 是一个可移植的 Codex／ChatGPT Skill，使用莫提默·艾德�
 mkdir -p ~/.agents/skills
 cp -R deep-read ~/.agents/skills/deep-read
 ```
+
+Claude Code 用户复制到 `~/.claude/skills/deep-read` 即可，同一份 `SKILL.md` 通用。
 
 然后显式调用 `$deep-read`，或者直接要求 Agent 系统精读某一本非虚构作品。
 
@@ -163,7 +170,8 @@ deep-read-skill/
 │   ├── references/
 │   │   ├── adler-prompts.md
 │   │   ├── follow-up.md
-│   │   └── html-contract.md
+│   │   ├── html-contract.md
+│   │   └── scope-rerun.md
 │   └── scripts/
 │       ├── extract_epub_node.py
 │       ├── inspect_epub.py

@@ -53,7 +53,7 @@ Read [references/adler-prompts.md](references/adler-prompts.md) and run the thre
 - Pass 2, rules 5–8: what the book says and how it argues.
 - Pass 3, rules 9–15: whether the book is sound, with rules 12–15 clearly marked as provisional.
 
-When the analysis backend returns quotations, treat them only as candidates.
+When the analysis backend returns quotations, treat them only as candidates. In testing, a research backend explicitly instructed to quote verbatim still returned 0 of 4 exact matches, including invented half-sentences.
 
 ## 4. Verify every quotation locally
 
@@ -96,6 +96,10 @@ Before delivery:
 ## Follow-up close reading
 
 When the reader returns with a specific question about one chapter or section, read [references/follow-up.md](references/follow-up.md). Preserve the user's question verbatim and analyze only the smallest source window that can answer it.
+
+## Scope rerun (deep dive)
+
+When the reader asks to go deeper into a concept or range rather than asking one question, read [references/scope-rerun.md](references/scope-rerun.md). Rerun rules 1→15 inside that range. Never replace the fifteen rules with a custom outline.
 
 ## Completion report
 
