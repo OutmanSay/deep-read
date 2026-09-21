@@ -71,7 +71,7 @@ The scripts use only the Python standard library.
 ### Repository structure
 
 ```text
-deep-read-skill/
+deep-read/
 ├── deep-read/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
@@ -163,7 +163,7 @@ python3 deep-read/scripts/verify_quotes.py --source fulltext.txt --quotes quotes
 ### 仓库结构
 
 ```text
-deep-read-skill/
+deep-read/
 ├── deep-read/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
