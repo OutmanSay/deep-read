@@ -8,7 +8,7 @@
 
 ### Overview
 
-Deep Read is a portable agent skill (Claude Code, Codex, Pi, ZCode, OpenClaw, and other agents that read `SKILL.md`) for analyzing expository nonfiction with Mortimer J. Adler and Charles Van Doren's fifteen rules of analytical reading.
+Deep Read is a portable agent skill (Claude Code, Codex, Cursor, GitHub Copilot, Gemini CLI, OpenCode, Windsurf, Pi, Kimi, Qwen Code, ZCode, OpenClaw, and any agent that reads `SKILL.md`) for analyzing expository nonfiction with Mortimer J. Adler and Charles Van Doren's fifteen rules of analytical reading.
 
 It produces a traceable HTML reading guide that keeps all fifteen rules visible and ordered, verifies published quotations against the source text, and treats criticism as provisional rather than pretending one book can fact-check itself.
 
@@ -44,12 +44,22 @@ Pages generated for *The Courage to Be Disliked* (Kishimi & Koga):
 
 Copy the `deep-read` directory into your agent's skill directory. The same `SKILL.md` works everywhere:
 
-| Agent | Skill directory |
+| Agent | Skill directory (user level) |
 |---|---|
 | Claude Code | `~/.claude/skills/` |
-| Codex, Pi | `~/.agents/skills/` (Pi also reads `~/.pi/agent/skills/`) |
+| Codex | `~/.agents/skills/` |
+| Cursor | `~/.cursor/skills/` (also reads `~/.agents/skills/`) |
+| GitHub Copilot (VS Code) | `~/.copilot/skills/` (also reads `~/.agents/skills/`) |
+| Gemini CLI | `~/.gemini/skills/` (also reads `~/.agents/skills/`) |
+| OpenCode | `~/.config/opencode/skills/` (also reads `~/.agents/skills/`) |
+| Windsurf | `~/.codeium/windsurf/skills/` (also reads `~/.agents/skills/`) |
+| Pi | `~/.agents/skills/` or `~/.pi/agent/skills/` |
+| Kimi Code CLI | `~/.config/agents/skills/` or `~/.kimi/skills/` |
+| Qwen Code | `~/.qwen/skills/` |
 | ZCode | `~/.zcode/skills/` (or import from another agent under Settings → Skills) |
 | OpenClaw | `~/.openclaw/skills/` |
+
+`~/.agents/skills/` is the shared location read by several of these agents.
 
 ```bash
 mkdir -p ~/.agents/skills
@@ -113,7 +123,7 @@ This independent project applies ideas from *How to Read a Book* by Mortimer J. 
 
 ### 项目简介
 
-Deep Read 是一个可移植的 Agent Skill（Claude Code／Codex／Pi／ZCode／OpenClaw 等支持 `SKILL.md` 的 Agent 通用），使用莫提默·艾德勒与查尔斯·范多伦提出的分析阅读十五条规则，系统精读论说性非虚构作品。
+Deep Read 是一个可移植的 Agent Skill（Claude Code／Codex／Cursor／GitHub Copilot／Gemini CLI／OpenCode／Windsurf／Pi／Kimi／Qwen Code／ZCode／OpenClaw 等支持 `SKILL.md` 的 Agent 通用），使用莫提默·艾德勒与查尔斯·范多伦提出的分析阅读十五条规则，系统精读论说性非虚构作品。
 
 它会生成一份可追溯的 HTML 阅读指南：十五条规则始终清晰可见并保持原有顺序；所有公开引文都必须回到原文逐字核验；对作者的批评只作为“待议候选”，不会假装一本书能够独立核验自身的历史与事实判断。
 
@@ -149,12 +159,22 @@ Deep Read 是一个可移植的 Agent Skill（Claude Code／Codex／Pi／ZCode�
 
 将 `deep-read` 目录复制到所用 Agent 的 Skill 目录，同一份 `SKILL.md` 通用：
 
-| Agent | Skill 目录 |
+| Agent | Skill 目录（用户级） |
 |---|---|
 | Claude Code | `~/.claude/skills/` |
-| Codex、Pi | `~/.agents/skills/`（Pi 也读 `~/.pi/agent/skills/`） |
+| Codex | `~/.agents/skills/` |
+| Cursor | `~/.cursor/skills/`（也读 `~/.agents/skills/`） |
+| GitHub Copilot（VS Code） | `~/.copilot/skills/`（也读 `~/.agents/skills/`） |
+| Gemini CLI | `~/.gemini/skills/`（也读 `~/.agents/skills/`） |
+| OpenCode | `~/.config/opencode/skills/`（也读 `~/.agents/skills/`） |
+| Windsurf | `~/.codeium/windsurf/skills/`（也读 `~/.agents/skills/`） |
+| Pi | `~/.agents/skills/` 或 `~/.pi/agent/skills/` |
+| Kimi Code CLI | `~/.config/agents/skills/` 或 `~/.kimi/skills/` |
+| 通义 Qwen Code | `~/.qwen/skills/` |
 | ZCode | `~/.zcode/skills/`（也可在 设置 → 技能 里从其他 Agent 一键导入） |
 | OpenClaw | `~/.openclaw/skills/` |
+
+`~/.agents/skills/` 是多家共用的目录，放这里一次可被多个 Agent 读到。
 
 ```bash
 mkdir -p ~/.agents/skills
