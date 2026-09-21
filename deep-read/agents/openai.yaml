@@ -1,0 +1,7 @@
+interface:
+  display_name: "Deep Read"
+  short_description: "Apply Adler's 15 rules to deeply analyze nonfiction books"
+  brand_color: "#9E3E34"
+  default_prompt: "Use $deep-read to analyze this expository book with Adler's 15-rule framework."
+policy:
+  allow_implicit_invocation: true
