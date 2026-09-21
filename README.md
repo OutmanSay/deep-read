@@ -12,6 +12,14 @@ Deep Read is a portable agent skill (Codex, ChatGPT, Claude Code) for analyzing 
 
 It produces a traceable HTML reading guide that keeps all fifteen rules visible and ordered, verifies published quotations against the source text, and treats criticism as provisional rather than pretending one book can fact-check itself.
 
+### Example output
+
+Pages generated for *The Courage to Be Disliked* (Kishimi & Koga):
+
+| Whole-book guide: rules 1→15 in order | Deep dive: the same fifteen rules rerun on two chapters |
+|---|---|
+| ![Whole-book guide](docs/example-whole-book.png) | ![Scope rerun](docs/example-scope-rerun.png) |
+
 ### Design principles
 
 | Principle | Meaning |
@@ -103,6 +111,14 @@ This independent project applies ideas from *How to Read a Book* by Mortimer J. 
 Deep Read 是一个可移植的 Agent Skill（Codex／ChatGPT／Claude Code 通用），使用莫提默·艾德勒与查尔斯·范多伦提出的分析阅读十五条规则，系统精读论说性非虚构作品。
 
 它会生成一份可追溯的 HTML 阅读指南：十五条规则始终清晰可见并保持原有顺序；所有公开引文都必须回到原文逐字核验；对作者的批评只作为“待议候选”，不会假装一本书能够独立核验自身的历史与事实判断。
+
+### 效果示例
+
+以《被讨厌的勇气》（岸见一郎、古贺史健）为例生成的页面：
+
+| 全书版：规则 1→15 逐条执行 | 深挖版：同一套十五条在两章内重跑 |
+|---|---|
+| ![全书版](docs/example-whole-book.png) | ![深挖版](docs/example-scope-rerun.png) |
 
 ### 设计原则
 
